@@ -3,7 +3,6 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://postgres:5432/sachin
-    #    url: jdbc:mysql://localhost:3307/embarkx
     username: sachin
     password: sachin
     driver-class-name: org.postgresql.Driver
