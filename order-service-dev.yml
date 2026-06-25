@@ -26,3 +26,17 @@ eureka:
   instance:
     ip-address: 127.0.0.1
     prefer-ip-address: true
+
+
+logging:
+  level:
+    root: INFO
+    com.ecommerce.user1: TRACE
+
+  file:
+    name: log/${spring.application.name}.log
+
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 7
