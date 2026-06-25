@@ -16,13 +16,26 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-  eureka:
-    client:
-      register-with-eureka: true
-      fetch-registry: true
-      serviceUrl:
-        defaultZone: http://localhost:8761/eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
 
-    instance:
-      ip-address: 127.0.0.1
-      prefer-ip-address: true
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+
+logging:
+  level:
+    root: INFO
+    com.ecommerce.user1: TRACE
+
+  file:
+    name: log/${spring.application.name}.log
+
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 7
