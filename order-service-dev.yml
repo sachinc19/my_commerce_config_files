@@ -1,12 +1,25 @@
 server:
   port: 8083
 
+rabbitmq:
+ exchange:
+   name: order.exchange
+ queue:
+   name: order.queue
+ routing:
+   key: order.tracking
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/sachin
     username: sachin
     password: sachin
     driver-class-name: org.postgresql.Driver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
   jpa:
     show-sql: true
